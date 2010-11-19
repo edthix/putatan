@@ -25,12 +25,11 @@ echo $this->Html->css(array('reset', 'text', '960', 'putatan'));
                     <?php echo $this->Session->flash(); ?>
                     
                     <fieldset>
-                                                       
-                            <form action="/questions/search" method="get">
-                                <input type="text" name="q" id="q" class="search" value="Cari jawapan dulu.." /><br />
-                                <input type="submit" name="search" value="OK bah!" class="button_search" />
-                            </form>
-                            
+                    		<?php 
+                    			echo $this->Form->create("Question", array("action" => "search")) . "\n"; 
+                    			echo $this->Form->input("q", array("class" => "search", "label" => false, "value" => "Cari jawapan dulu..."));
+                    			echo $this->Form->submit("OK bah!", array("class" => "button_search"));
+                    		?>                           
                     </fieldset>
                 </div>
                 <hr />
