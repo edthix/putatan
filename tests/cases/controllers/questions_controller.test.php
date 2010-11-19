@@ -22,8 +22,21 @@ class QuestionsControllerTestCase extends CakeTestCase {
     ClassRegistry::flush();
   }
 
-  function testIndex() {
+  function testIndexListLast5Questions() {
+    $return = $this->testAction('/questions/index', array('return' => 'vars')); 
+    $this->assertEqual(5, count($return['last5questions']));
+    $this->assertEqual(10, $return['last5questions'][0]['Question']['id']);
+  }
 
+  function testIndexTitleForLayout(){
+    $return = $this->testAction('/questions/index', array('return' => 'vars')); 
+    $this->assertEqual('Putatan : Home', $return['title_for_layout'] );
+  }
+
+  function testIndexListLast5Answers(){
+    $return = $this->testAction('/questions/index', array('return' => 'vars'));
+    $this->assertEqual(5, count($return['last5answers']));
+    $this->assertEqual(5, $return['last5answers'][0]['Answer']['id']);
   }
 
   function testView() {
