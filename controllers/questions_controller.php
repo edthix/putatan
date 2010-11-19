@@ -3,6 +3,7 @@ class QuestionsController extends AppController {
 
   var $name = 'Questions';
   var $uses = array('Question', 'Answer');
+  var $helpers = array('Html', 'Time');
 
   function index() {
     $last5questions = $this->Question->find('all',

@@ -34,4 +34,6 @@ h3 { border:none; }
 .section li a span { color:#555555; }
 
 
-
+    <form id="QuestionAddForm" method="post" action="/hackfest/putatan/questions/add" accept-charset="utf-8"><div style="display:none;"><input type="hidden" name="_method" value="POST" /></div>    <fieldset> 
+	<div class="input text required"><label for="QuestionTitle">Title</label><input name="data[Question][title]" type="text" maxlength="255" id="QuestionTitle" /></div><div class="input textarea required"><label for="QuestionBody">Body</label><textarea name="data[Question][body]" cols="30" rows="6" id="QuestionBody" ></textarea></div>    </fieldset> 
+    <div class="submit"><input type="submit" value="Save" /></div></form></div>

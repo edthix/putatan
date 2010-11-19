@@ -3,10 +3,11 @@
 <head>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <title>Putatan<?php echo ' : '. $title_for_layout; ?></title>
-<link rel="stylesheet" href="css/reset.css" />
-<link rel="stylesheet" href="css/text.css" />
-<link rel="stylesheet" href="css/960.css" />
-<link rel="stylesheet" href="css/putatan.css" />
+<?php
+echo $this->Html->charset();
+echo $this->Html->css(array('reset', 'text', '960', 'putatan'));
+//echo $this->Html->script(array('jquery-1.4.3.min','candy-shop'));
+?>
 </head>
 
 <body>
@@ -25,8 +26,8 @@
                     
                     <fieldset>
                                                        
-                            <form action="#" method="post">
-                                <input type="text" name="search" class="search" value="Cari jawapan dulu.." /><br />
+                            <form action="/questions/search" method="get">
+                                <input type="text" name="q" id="q" class="search" value="Cari jawapan dulu.." /><br />
                                 <input type="submit" name="search" value="OK bah!" class="button_search" />
                             </form>
                             
@@ -43,19 +44,16 @@
                 <?php echo $content_for_layout; ?>
         
         
-                <hr />
-                <div class="section">
-                    <h2>Lorem Ipsum Dolor Sit Amet</h2>
-                    <ul>
-                        <?php for($i=0; $i<5; $i++) { ?>
-                        <li><a href="#">20 Nov, 2010 ~ Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet</a></li>
-                        <?php } ?>
-                    </ul>
-                </div>
+
                                                
         </div>
         
         <div class="grid_3">                
+                
+                <div class="section">         
+                    <?php echo $this->Html->link(__('New Question', true), array('action' => 'add')); ?>
+                </div>
+                <br />
                          
                 <div class="section">
                     <h2>Tags</h2>
