@@ -78,7 +78,7 @@ class DATABASE_CONFIG {
 		'persistent' => false,
 		'host' => 'localhost',
 		'login' => 'user', 
-		'password' => 'password',
+		'password' => '',
 		'database' => 'database_name',
 		'prefix' => '',
 	);
