@@ -31,9 +31,36 @@ h3 { border:none; }
 .section li a { display:block; padding:10px 12px; border-bottom:1px solid #DBD5B7; text-decoration:none; color:#9A8E51; }
 .section li a:hover { background:#EDEBD5; color:#444444; } 
 
+.section td { padding:10px 12px; border-bottom:1px dashed #DBD5B7; text-decoration:none; color:#444444; }
+
 .section li a span { color:#555555; }
 
+.section fieldset { xbackground:#ce0000; padding:0 10px; }
+.section label { display:block;  padding:0 10px; font-weight:bold; color:#9A8E51; }
 
-    <form id="QuestionAddForm" method="post" action="/hackfest/putatan/questions/add" accept-charset="utf-8"><div style="display:none;"><input type="hidden" name="_method" value="POST" /></div>    <fieldset> 
-	<div class="input text required"><label for="QuestionTitle">Title</label><input name="data[Question][title]" type="text" maxlength="255" id="QuestionTitle" /></div><div class="input textarea required"><label for="QuestionBody">Body</label><textarea name="data[Question][body]" cols="30" rows="6" id="QuestionBody" ></textarea></div>    </fieldset> 
+.section input[type=text],
+.section textarea { font-family:Arial, Verdana; color:#555555; border:1px solid #444444; font-size:16px; padding:10px; width:90%; margin-bottom:10px; }
+
+.section input[type=submit] { font-weight:bold; padding:10px; font-size:14px;}
+
+
+
+
+
+/*
+    <form id="QuestionAddForm" method="post" action="/hackfest/putatan/questions/add" accept-charset="utf-8">
+    <div style="display:none;"><input type="hidden" name="_method" value="POST" /></div>
+    <fieldset> 
+    
+        <div class="input text required">
+            <label for="QuestionTitle">Title</label>
+            <input name="data[Question][title]" type="text" maxlength="255" id="QuestionTitle" />
+        </div>
+        
+        <div class="input textarea required"><label for="QuestionBody">Body</label>
+            <textarea name="data[Question][body]" cols="30" rows="6" id="QuestionBody" ></textarea>
+        </div>
+    
+    </fieldset> 
     <div class="submit"><input type="submit" value="Save" /></div></form></div>
+*/
